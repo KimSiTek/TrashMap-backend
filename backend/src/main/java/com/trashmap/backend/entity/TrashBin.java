@@ -13,4 +13,5 @@ public class TrashBin {
     private double lng;
     private String status;
     private String description;
+    private String imageUrl;
 }
