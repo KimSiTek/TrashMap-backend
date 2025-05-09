@@ -12,4 +12,5 @@ public class TrashBin {
     private double lat;
     private double lng;
     private String status;
+    private String description;
 }
