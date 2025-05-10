@@ -15,3 +15,6 @@ public class TrashBin {
     private String description;
     private String imageUrl;
 }
+<button onClick={() => setShowUpload(true)}>쓰레기통 상태 신고</button>
+
+
