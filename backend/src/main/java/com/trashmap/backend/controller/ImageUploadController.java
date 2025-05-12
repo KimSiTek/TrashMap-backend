@@ -85,4 +85,15 @@ public class ImageUploadController {
                 .contentType(MediaType.IMAGE_JPEG)
                 .body(resource);
     }
+
+    @GetMapping("/images/by-bin/{binId}")
+    public List<TrashImageDTO> getImagesByBinId(@PathVariable String binId) {
+        return trashImageRepository.findByTrashBinName(binId)
+                .stream()
+                .map(img -> new TrashImageDTO(
+                        img.getImagePath(),
+                        img.getTrashBinName()
+                ))
+                .collect(Collectors.toList());
+    }
 }
