@@ -42,4 +42,13 @@ public class TrashImage {
     public void setUploadedAt(LocalDateTime uploadedAt) {
         this.uploadedAt = uploadedAt;
     }
+
+    private String trashBinName;
+    public String getTrashBinName() {
+        return trashBinName;
+    }
+
+    public void setTrashBinName(String trashBinName) {
+        this.trashBinName = trashBinName;
+    }
 }
