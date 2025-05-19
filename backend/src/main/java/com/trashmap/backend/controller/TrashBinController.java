@@ -19,6 +19,12 @@ public class TrashBinController {
 
     @GetMapping
     public List<TrashBin> getAll() {
-        return repository.findAll();
+        try {
+            return repository.findAll();
+        } catch (Exception e) {
+            e.printStackTrace(); // Railway Logs에 출력
+            return List.of();    // 죽지 않게 fallback
+        }
     }
+
 }
